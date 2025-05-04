@@ -13,6 +13,8 @@ void AItem::BeginPlay()
  	UWorld* World = GetWorld();
  
  	SetActorLocation(FVector(0.f, 0.f, 50.f));
+    // tthis will set the actor rotation to (0, 45, 0) in the world space.
+ 	// the actor will be rotated to this rotation when the game starts.
  	SetActorRotation(FRotator(0.f, 45.f, 0.f));
  	FVector Location = GetActorLocation();
  	FVector Forward = GetActorForwardVector();
