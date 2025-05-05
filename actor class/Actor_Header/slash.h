@@ -18,5 +18,9 @@ protected:
 	// Called when the game starts or when spawned
 
 private:
-
+ 	// provide sine wave movement to the actor.
+ 	// Movement rate in units of cm/s
+ 	float RunningTime;
+ 	float Amplitude = 0.25f;
+ 	float TimeConstant = 5.f;
 };
