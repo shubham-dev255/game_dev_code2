@@ -21,9 +21,10 @@ private:
  	// provide sine wave movement to the actor.
  	// Movement rate in units of cm/s
  	float RunningTime;
-
+	// the UPROPERTY macro is used to expose the variable to the editor.
 	UPROPERTY(EditAnywhere)
  	float Amplitude = 0.25f;
+	// the UPROPERTY macro is used to expose the variable to the editor.
 	UPROPERTY(EditAnywhere)
  	float TimeConstant = 5.f;
 };
