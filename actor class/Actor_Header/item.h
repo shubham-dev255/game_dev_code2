@@ -24,10 +24,10 @@ private:
 	// The visible anywhere macro is used to expose the variable to the editor.
 	UPROPERTY(visibleAnywhere)
  	float RunningTime;
-	// the UPROPERTY macro is used to expose the variable to the editor and make it visible to blueprints.
+	// the UPROPERTY macro is used to expose the variable to the editor and make it visible to event graphs.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sine Parameters")
  	float Amplitude = 0.25f;
-	// the UPROPERTY macro is used to expose the variable to the editor and make it visible to blueprints.
+	// the UPROPERTY macro is used to expose the variable to the editor and make it visible to event graph.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sine Parameters")
  	float TimeConstant = 5.f;
 };
