@@ -29,5 +29,4 @@ void ABird::Tick(float DeltaTime)
 void ABird::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
 }
