@@ -12,7 +12,7 @@ void AWeapon::OnSphereEndOverlap(UPrimitiveComponent* OverlappedComponent, AActo
 
 }
 
-// Program from Item.cpp: Updated to include weapon-specific functionality
+// Program from Item.h: Updated to include weapon-specific functionality
 #pragma once
 
 #include "CoreMinimal.h"
