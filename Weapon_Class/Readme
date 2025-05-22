@@ -1,1 +1,2 @@
-In this following section the programs are written for the another classes, hence the program of the corresponding class will be written as comment on the top of the program.
+In this following section the programs are written for the another classes, hence the program of the corresponding class will be written in there respective classes with similar name or in short form of there name.
+For Example: picking_up_Weapon.cpp is in weapon class. But program of item.cpp is writen in Actor class with Pick_Weapon_item.cpp.
