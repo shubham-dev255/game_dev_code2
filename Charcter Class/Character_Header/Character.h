@@ -5,7 +5,7 @@
 #include "CharacterTypes.h"
 #include "SlashCharacter.generated.h"
 
-
+class UAnimMontage;
 class USpringArmComponent;
 class UCameraComponent;
 class UGroomComponent;
@@ -32,6 +32,7 @@ protected:
 	void Turn(float Value);
 	void LookUp(float Value);
 	void EKeyPressed();
+	void Attack();
 
 private:
 
@@ -53,6 +54,14 @@ private:
 
 	UPROPERTY(VisibleInstanceOnly)
 	AItem* OverlappingItem;
+
+
+	/** 
+	* Animation montages
+	*/
+	UPROPERTY(EditDefaultsOnly, Category = Montages)
+	UAnimMontage* AttackMontage;
+	
 public:
 	FORCEINLINE void SetOverlappingItem(AItem* Item) { OverlappingItem = Item; }
 	FORCEINLINE ECharacterState GetCharacterState() const { return CharacterState; }
