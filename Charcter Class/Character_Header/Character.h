@@ -26,7 +26,10 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
-	
+
+	/** 
+	* Callbacks for input
+	*/	
 	void MoveForward(float Value);
 	void MoveRight(float Value);
 	void Turn(float Value);
@@ -34,9 +37,15 @@ protected:
 	void EKeyPressed();
 	void Attack();
 
+	/** 
+	* Play montage functions
+	*/
+	void PlayAttackMontage();
+
 private:
 
 	ECharacterState CharacterState = ECharacterState::ECS_Unequipped;
+	EActionState ActionState = EActionState::EAS_Unoccupied;
 
 	UPROPERTY(VisibleAnywhere)
 	USpringArmComponent* CameraBoom;
