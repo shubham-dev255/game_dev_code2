@@ -4,6 +4,13 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
+enum class EItemState : uint8
+{
+	EIS_Hovering,
+	EIS_Equipped
+};
+
 UCLASS()
 class MYPROJECT_API Aitems : public AActor
 {
@@ -34,7 +41,7 @@ protected:
 	template<typename T>
 	T Avg(T First, T Second);
 
-
+	EItemState ItemState = EItemState::EIS_Hovering;	
 private:
  	// provide sine wave movement to the actor.
  	// Movement rate in units of cm/s
