@@ -9,9 +9,9 @@ class UAnimMontage;
 class USpringArmComponent;
 class UCameraComponent;
 class UGroomComponent;
-
+class AWeapon;
 class AItem;
-
+class UAnimMontage;
 
 UCLASS()
 class SLASH_API ASlashCharacter : public ACharacter
