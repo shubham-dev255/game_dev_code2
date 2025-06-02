@@ -42,6 +42,10 @@ protected:
 	T Avg(T First, T Second);
 
 	EItemState ItemState = EItemState::EIS_Hovering;	
+
+	UPROPERTY(VisibleAnywhere)Add commentMore actions
+	USphereComponent* Sphere;
+	
 private:
  	// provide sine wave movement to the actor.
  	// Movement rate in units of cm/s
