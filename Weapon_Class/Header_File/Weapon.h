@@ -24,4 +24,7 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = "Weapon Properties")
 	USoundBase* EquipSound;
+
+	UPROPERTY(VisibleAnywhere, Category = "Weapon Properties")Add commentMore actions
+	UBoxComponent* WeaponBox;
 };
