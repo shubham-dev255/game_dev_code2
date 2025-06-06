@@ -16,10 +16,13 @@ public:
 	void Equip(USceneComponent* InParent, FName InSocketName);
 	void AttachMeshToSocket(USceneComponent* InParent, const FName& InSocketName);
 protected:
+
 	virtual void BeginPlay() override;
+
 	virtual void OnSphereOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) override;
 	virtual void OnSphereEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex) override;
-	UFUNCTION()Add commentMore actions
+	
+	UFUNCTION()
 	void OnBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 private:
 
