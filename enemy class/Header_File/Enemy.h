@@ -4,7 +4,7 @@
 #include "Enemy.generated.h"
 
 UCLASS()
-class SLASH_API AEnemy : public ACharacter
+
 class SLASH_API AEnemy : public ACharacter, public IHitInterface
 {
 	GENERATED_BODY()
