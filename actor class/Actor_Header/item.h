@@ -46,6 +46,9 @@ protected:
 	UPROPERTY(VisibleAnywhere)Add commentMore actions
 	USphereComponent* Sphere;
 	
+
+	UPROPERTY(EditAnywhere)
+	class UNiagaraComponent* EmbersEffect;
 private:
  	// provide sine wave movement to the actor.
  	// Movement rate in units of cm/s
