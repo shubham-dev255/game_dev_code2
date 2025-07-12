@@ -4,6 +4,7 @@
 #include "Enemy.generated.h"
 
 class UAnimMontage;
+class UAttributeComponent;
 
 UCLASS()
 
@@ -29,6 +30,9 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = VisualEffects)
 	UParticleSystem* HitParticles;
+
+	UPROPERTY(VisibleAnywhere)
+	UAttributeComponent* Attributes;
 
 protected:
 
