@@ -36,6 +36,9 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	UAttributeComponent* Attributes;
 
+	UPROPERTY(EditDefaultsOnly, Category = Montages)
+	UAnimMontage* DeathMontage;
+
 	UPROPERTY(VisibleAnywhere)
 	UWidgetComponent* HealthBarWidget;
 
@@ -47,6 +50,7 @@ protected:
 	void PlayHitReactMontage(const FName& SectionName);
 	virtual void BeginPlay() override;
 
+	void Die();
 public:	
 
 };
