@@ -64,6 +64,8 @@ private:
 	UPROPERTY(EditInstanceOnly, Category = "AI Navigation")
 	TArray<AActor*> PatrolTargets;
 
+	UPROPERTY(EditAnywhere)
+	double PatrolRadius = 200
 protected:
 
 	/**
@@ -74,6 +76,7 @@ protected:
 
 	void Die();
 
+	bool InTargetRange(AActor* Target, double Radius);
 	UPROPERTY(BlueprintReadOnly)
 	EDeathPose DeathPose = EDeathPose::EDP_Alive;
 public:	
