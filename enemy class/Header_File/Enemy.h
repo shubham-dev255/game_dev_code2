@@ -7,6 +7,7 @@
 class UAnimMontage;
 class UAttributeComponent;
 class UWidgetComponent;
+class UPawnSensingComponent;
 
 UCLASS()
 
@@ -22,6 +23,22 @@ public:
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
 private:
 
+
+
+	/*
+	* Components
+	*/
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
+	UAttributeComponent* Attributes;
+
+	UPROPERTY(VisibleAnywhere)
+	UWidgetComponent* HealthBarWidget;
+
+
+	UPROPERTY(VisibleAnywhere)
+	UPawnSensingComponent* PawnSensing;
+
 	/**
 	* Animation montages
 	*/
@@ -34,15 +51,8 @@ private:
 	UPROPERTY(EditAnywhere, Category = VisualEffects)
 	UParticleSystem* HitParticles;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
-	UAttributeComponent* Attributes;
-
 	UPROPERTY(EditDefaultsOnly, Category = Montages)
 	UAnimMontage* DeathMontage;
-
-	UPROPERTY(VisibleAnywhere)
-	UWidgetComponent* HealthBarWidget;
-
 
 	UPROPERTY()
 	AActor* CombatTarget;
@@ -68,17 +78,23 @@ private:
 	double PatrolRadius = 200
 protected:
 
+	virtual void BeginPlay() override;
+	void Die();
+	bool InTargetRange(AActor* Target, double Radius);
+	void MoveToTarget(AActor* Target);
+	AActor* ChoosePatrolTarget();
+
+	UFUNCTION()
+	void PawnSeen(APawn* SeenPawn);
+
 	/**
 	* Play montage functions
 	*/
 	void PlayHitReactMontage(const FName& SectionName);
-	virtual void BeginPlay() override;
 
-	void Die();
-
-	bool InTargetRange(AActor* Target, double Radius);
 	UPROPERTY(BlueprintReadOnly)
 	EDeathPose DeathPose = EDeathPose::EDP_Alive;
+	
 public:	
 
 };
