@@ -154,7 +154,7 @@ void AEnemy::PawnSeen(APawn* SeenPawn)
 		GetWorldTimerManager().ClearTimer(PatrolTimer);
 		GetCharacterMovement()->MaxWalkSpeed = 300.f;
 		CombatTarget = SeenPawn;
-		MoveToTarget(CombatTarget);
+	
 		
 		if (EnemyState != EEnemyState::EES_Attacking)
 		{
