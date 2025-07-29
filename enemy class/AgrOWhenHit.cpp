@@ -208,7 +208,7 @@ void AEnemy::CheckCombatTarget()
 		EnemyState = EEnemyState::EES_Patrolling;
 		GetCharacterMovement()->MaxWalkSpeed = 125.f;
 		MoveToTarget(PatrolTarget);
-		UE_LOG(LogTemp, Warning, TEXT("Lose Interest"));
+
 	}
 	else if (!InTargetRange(CombatTarget, AttackRadius) && EnemyState != EEnemyState::EES_Chasing)
 	{
