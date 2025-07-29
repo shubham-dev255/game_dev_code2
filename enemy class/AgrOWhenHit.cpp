@@ -216,14 +216,13 @@ void AEnemy::CheckCombatTarget()
 		EnemyState = EEnemyState::EES_Chasing;
 		GetCharacterMovement()->MaxWalkSpeed = 300.f;
 		MoveToTarget(CombatTarget);
-		UE_LOG(LogTemp, Warning, TEXT("Chase Player"));
 	}
 	else if (InTargetRange(CombatTarget, AttackRadius) && EnemyState != EEnemyState::EES_Attacking)
 	{
 		// Inside attack range, attack character
 		EnemyState = EEnemyState::EES_Attacking;
 		// TODO: Attack montage
-		UE_LOG(LogTemp, Warning, TEXT("Attack"));
+
 	}
 }
 
