@@ -1,1 +1,1 @@
-This Repository is made to store my game dev codes which i am learing from udemy course by stephen in his ultimate game dev cpp course.
+This repository contains game development projects I am working on as part of Stephen's "Ultimate Game Dev C++ Course" on Udemy. These projects showcase concepts and techniques in game development using C++ and C.
